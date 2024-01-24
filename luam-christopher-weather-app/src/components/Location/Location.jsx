@@ -11,39 +11,39 @@ export default function Location({ location, setLocation }) {
         <input
           onChange={handleLocation}
           type="radio"
-          id="newyork"
-          name="loc"
+          id="arctic"
+          name="location"
           value="arctic"
           checked={location === "arctic"}
         />
-        <label htmlFor="newyork">New York</label>
+        <label htmlFor="arctic">Murmansk - Arctic</label>
         <input
           onChange={handleLocation}
           type="radio"
-          id="rio"
-          name="loc"
+          id="rainforest"
+          name="location"
           value="rainforest"
           checked={location === "rainforest"}
         />
-        <label htmlFor="rio">Rio</label>
+        <label htmlFor="rainforest">Manaus - Rainforest</label>
         <input
           onChange={handleLocation}
           type="radio"
-          id="tokio"
-          name="loc"
+          id="sahara"
+          name="location"
           value="sahara"
           checked={location === "sahara"}
         />
-        <label htmlFor="tokio">Tokio</label>
+        <label htmlFor="sahara">Niger - Sahara</label>
         <input
           onChange={handleLocation}
           type="radio"
-          id="berlin"
-          name="loc"
+          id="europe"
+          name="location"
           value="europe"
           checked={location === "europe"}
         />
-        <label htmlFor="berlin">Berlin</label>
+        <label htmlFor="Europe">Berlin - Europe</label>
       </fieldset>
     </>
   );
