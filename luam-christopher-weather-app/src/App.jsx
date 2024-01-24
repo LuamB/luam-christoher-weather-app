@@ -51,9 +51,21 @@ function App() {
 
   const isGoodWeather = weather;
 
+  // useEffect(() => {
+  //   document.body.classList.toggle("good-weather", isGoodWeather);
+  //   document.body.classList.toggle("bad-weather", !isGoodWeather);
+  // }, [isGoodWeather]);
+
+  // don't show bad weather first when refreshing on sahara region
   useEffect(() => {
-    document.body.classList.toggle("good-weather", isGoodWeather);
-    document.body.classList.toggle("bad-weather", !isGoodWeather);
+    if (isGoodWeather) {
+      document.body.classList.add("good-weather");
+    } else if (!isGoodWeather) {
+      document.body.classList.remove("good-weather");
+      document.body.classList.add("bad-weather");
+    } else {
+      document.body.classList.add("");
+    }
   }, [isGoodWeather]);
 
   const filteredActivities = activities.filter(
